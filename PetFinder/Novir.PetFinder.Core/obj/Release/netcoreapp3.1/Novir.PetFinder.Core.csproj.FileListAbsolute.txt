@@ -1,0 +1,12 @@
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\bin\Release\netcoreapp3.1\Novir.PetFinder.Core.deps.json
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\bin\Release\netcoreapp3.1\Novir.PetFinder.Core.dll
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\bin\Release\netcoreapp3.1\Novir.PetFinder.Core.pdb
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\bin\Release\netcoreapp3.1\Novir.PetFinder.Data.dll
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\bin\Release\netcoreapp3.1\Novir.PetFinder.Data.pdb
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\obj\Release\netcoreapp3.1\Novir.PetFinder.Core.csprojAssemblyReference.cache
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\obj\Release\netcoreapp3.1\Novir.PetFinder.Core.AssemblyInfoInputs.cache
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\obj\Release\netcoreapp3.1\Novir.PetFinder.Core.AssemblyInfo.cs
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\obj\Release\netcoreapp3.1\Novir.PetFinder.Core.csproj.CopyComplete
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\obj\Release\netcoreapp3.1\Novir.PetFinder.Core.dll
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\obj\Release\netcoreapp3.1\Novir.PetFinder.Core.pdb
+C:\Projects\PetFinder\PetFinder\Novir.PetFinder.Core\obj\Release\netcoreapp3.1\Novir.PetFinder.Core.csproj.CoreCompileInputs.cache

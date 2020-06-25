@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container" style="margin:100px 0 0 0">
+    <h1>@Localizer["Category"]</h1>
+</div>

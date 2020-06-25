@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novir.PetFinder.Core", "Novir.PetFinder.Core\Novir.PetFinder.Core.csproj", "{7F6C2BBE-0CA3-4AD8-BFAE-302F18E453E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novir.PetFinder.Data", "Novir.PetFinder.Data\Novir.PetFinder.Data.csproj", "{942CF81F-AA06-4D8A-8D00-5B97914F7A5D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novir.PetFinder.App", "Novir.PetFinder.App\Novir.PetFinder.App.csproj", "{3D538CCE-D174-4191-9FB9-C6478407B27D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F6C2BBE-0CA3-4AD8-BFAE-302F18E453E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6C2BBE-0CA3-4AD8-BFAE-302F18E453E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6C2BBE-0CA3-4AD8-BFAE-302F18E453E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6C2BBE-0CA3-4AD8-BFAE-302F18E453E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{942CF81F-AA06-4D8A-8D00-5B97914F7A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942CF81F-AA06-4D8A-8D00-5B97914F7A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942CF81F-AA06-4D8A-8D00-5B97914F7A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942CF81F-AA06-4D8A-8D00-5B97914F7A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D538CCE-D174-4191-9FB9-C6478407B27D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D538CCE-D174-4191-9FB9-C6478407B27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D538CCE-D174-4191-9FB9-C6478407B27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D538CCE-D174-4191-9FB9-C6478407B27D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE5A72FD-E42E-4031-B1C7-4D3C14029FE2}
+	EndGlobalSection
+EndGlobal

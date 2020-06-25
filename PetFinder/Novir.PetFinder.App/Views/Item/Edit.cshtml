@@ -1,0 +1,76 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model Novir.PetFinder.App.ViewModels.Items.ItemViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ItemViewModel</h4>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Edit" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <input type="hidden" asp-for="Id" class="form-control" />
+                    <input type="hidden" asp-for="UserId" class="form-control" />
+                </div>
+                <div class="form-group col-sm-6">
+                    <label asp-for="Name" class="control-label">@Localizer["Name"]</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label asp-for="CategoryId" class="control-label">@Localizer["Category"]</label>
+                    <select required asp-for="CategoryId" asp-items="Model.AllCategories" class="form-control">
+                        <option value="">@Localizer["SelectCategory"]</option>
+                    </select>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label asp-for="Description" class="control-label">@Localizer["Description"]</label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label asp-for="Color" class="control-label">@Localizer["Color"]</label>
+                    <select required asp-for="Color" asp-items="Model.AllColors" class="form-control">
+                        <option value="">@Localizer["SelectColor"]</option>
+                    </select>
+                    <span asp-validation-for="Color" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label class="control-label">@Localizer["Pictures"]</label>
+                    @if (Model != null && Model.ItemImages != null)
+                    {
+                        @foreach (var image in Model.ItemImages)
+                        {
+                            <div class="col-sm-4">
+                                <img src="@image.Source" style="width:100%;height:auto; max-width:300px;" />
+                                <a href="/Item/DeleteImage?Id=@image.Id">
+                                    <span class="glyphicon glyphicon-trash" style="color:red" title="Delete"></span>
+                                </a>
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="form-group col-sm-3">
+                    <input type="file" name="formFiles" id="formFiles" class="form-control" multiple accept="image/x-png,image/gif,image/jpeg" />
+                </div>
+                <div class="form-group col-sm-12">
+                    <input type="submit" value="@Localizer["Save"]" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@*<div>
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+

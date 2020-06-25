@@ -1,0 +1,38 @@
+﻿@model IReadOnlyList<Novir.PetFinder.App.ViewModels.Categories.CategoryViewModel>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<div class="container" style="margin:100px 0 0 0">
+    <div class="row">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th><a href="/Category/Create">+</a></th>
+            </tr>
+            @foreach (var item in Model)
+    {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td><a href="/Category/Edit/@item.Id">Edit</a></td>
+            </tr>
+    }
+        </table>
+    </div>
+</div>

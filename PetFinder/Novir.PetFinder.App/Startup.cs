@@ -25,6 +25,10 @@ using Novir.PetFinder.Core.Services.Dictionaries;
 using Novir.PetFinder.Data.Repositories.Dictionaries;
 using Novir.PetFinder.Core.Services.Users;
 using Novir.PetFinder.Data.Repositories.Users;
+using Novir.PetFinder.App.Helpers;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Novir.PetFinder.Core.Services.Subscribers;
+using Novir.PetFinder.Data.Repositories.Subscribers;
 
 namespace Novir.PetFinder.App
 {
@@ -43,7 +47,12 @@ namespace Novir.PetFinder.App
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(
+                options =>
+                {
+                    options.SignIn.RequireConfirmedAccount = true;
+                    options.User.RequireUniqueEmail = true;
+                }).AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddLocalization(opts => opts.ResourcesPath = "Resources");
 
@@ -55,20 +64,25 @@ namespace Novir.PetFinder.App
 
             services.AddControllersWithViews();
 
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
             services.AddRazorPages();
             //services.AddTransient<DbContext, ApplicationDbContext>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IItemService, ItemService>();
+            services.AddScoped<ISubscriberService, SubscriberService>();
             services.AddScoped<IItemImageService, ItemImageService>();
             services.AddScoped<IColorService, ColorService>();
             services.AddScoped<IUserService, UserService>();
-
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IItemRepository, ItemRepository>();
             services.AddScoped<IItemImageRepository, ItemImageRepository>();
             services.AddScoped<IColorRepository, ColorRepository>();
+            services.AddScoped<ISubscriberRepository, SubscriberRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IEmailSender, EmailSender>();
+            services.AddScoped<ICityRepository, CityRepository>();
+            services.AddScoped<ICityService, CityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -76,8 +90,8 @@ namespace Novir.PetFinder.App
         {
             //if (env.IsDevelopment())
             //{
-                app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+            app.UseDeveloperExceptionPage();
+            app.UseDatabaseErrorPage();
             //}
             //else
             //{

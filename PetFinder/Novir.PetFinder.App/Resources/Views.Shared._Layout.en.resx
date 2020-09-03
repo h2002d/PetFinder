@@ -120,6 +120,9 @@
   <data name="About" xml:space="preserve">
     <value>About Us</value>
   </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Categories</value>
   </data>
@@ -134,6 +137,21 @@
   </data>
   <data name="Info" xml:space="preserve">
     <value>Info Link</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="MyItems" xml:space="preserve">
+    <value>My Items</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privacy</value>
   </data>
   <data name="Social" xml:space="preserve">
     <value>Social</value>

@@ -14,8 +14,15 @@ namespace Novir.PetFinder.Core.Mappings
             CreateMap<Item,ItemDto>();
             CreateMap<ItemDto,Item>();
 
+            CreateMap<ItemDetailDto, Item>();
+            CreateMap<Item, ItemDetailDto>();
+
             CreateMap<ItemImageDto, ItemImage>();
             CreateMap<ItemImage, ItemImageDto>();
+
+
+            CreateMap<SearchResultDto, Item>();
+            CreateMap<Item, SearchResultDto>();
         }
     }
 }

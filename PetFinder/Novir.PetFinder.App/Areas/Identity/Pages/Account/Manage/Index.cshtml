@@ -6,33 +6,41 @@
     ViewData["Title"] = "Profile";
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
-
-<h4>@ViewData["Title"]</h4>
-<partial name="_StatusMessage" model="Model.StatusMessage" />
-<div class="row">
-    <div class="col-md-6">
+<div>
+    <div class="col-md-8 col-sm-offset-2">
         <form id="profile-form" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Username"></label>
-                <input asp-for="Username" class="form-control" disabled />
+
+            <div class="form-group col-sm-6">
+                <label>@Localizer["Email"]</label>
+                <input asp-for="Email" disabled class="form-control" />
             </div>
-            <div class="form-group">
-                <label asp-for="Input.PhoneNumber"></label>
-                <input asp-for="Input.PhoneNumber" class="form-control" />
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            <div class="form-group col-sm-6">
+                <label>@Localizer["UserName"]</label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label>@Localizer["Found"]</label>
+            <div class="form-group col-sm-6">
+                <label>@Localizer["Name"]</label>
                 <input asp-for="UserDetail.Name" class="form-control" />
+                <input type="hidden" asp-for="UserDetail.Id" class="form-control" />
                 <span asp-validation-for="UserDetail.Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label></label>
+            <div class="form-group col-sm-6">
+                <label>@Localizer["SurName"]</label>
                 <input asp-for="UserDetail.SurName" class="form-control" />
                 <span asp-validation-for="UserDetail.SurName" class="text-danger"></span>
             </div>
-            <button id="update-profile-button" type="submit" class="btn btn-primary">Save</button>
+            <div class="form-group col-sm-8">
+                <label>@Localizer["PhoneNumber"]</label>
+                <input type="text" class="form-control " asp-for="PhoneNumber" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                <p class="col-sm-6" style="color: #E5E7D5;margin: 5px 0;"><i class="fa fa-question-circle"></i>Пример: +79587716327</p>
+                <span for="phoneNumber" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <button id="update-profile-button" type="submit" class="btn btn-primary col-sm-offset-3 col-sm-6">@Localizer["Save"]</button>
+            </div>
         </form>
     </div>
 </div>

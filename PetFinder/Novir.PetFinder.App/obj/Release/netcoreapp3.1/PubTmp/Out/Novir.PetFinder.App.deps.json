@@ -26,6 +26,7 @@
         "dependencies": {
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Leadtools.Image.Processing": "20.0.0.8",
           "Localization.AspNetCore.TagHelpers": "0.6.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.1",
@@ -33,8 +34,9 @@
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "3.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.1",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.1",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.3",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
           "Novir.PetFinder.Core": "1.0.0",
+          "SixLabors.ImageSharp": "1.0.0-rc0003",
           "System.Drawing.Common": "4.7.0",
           "Microsoft.AspNetCore.Antiforgery.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
@@ -345,6 +347,2257 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
+      "Leadtools.Formats.Raster.Common/20.0.0.8": {
+        "dependencies": {
+          "Leadtools.Kernel": "20.0.0.8",
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblfbmp.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblfcmp.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblfcmw.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblffax.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblfgif.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblfj2k.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblfjb2.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblfjbg.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblfpng.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblfraw.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/liblftif.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltclr.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Bmp.framework/Leadtools.Codecs.Bmp": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Bmp.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Cmp.framework/Leadtools.Codecs.Cmp": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Cmp.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Cmw.framework/Leadtools.Codecs.Cmw": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Cmw.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Fax.framework/Leadtools.Codecs.Fax": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Fax.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Gif.framework/Leadtools.Codecs.Gif": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Gif.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.J2k.framework/Leadtools.Codecs.J2k": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.J2k.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Jb2.framework/Leadtools.Codecs.Jb2": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Jb2.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Jbg.framework/Leadtools.Codecs.Jbg": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Jbg.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Png.framework/Leadtools.Codecs.Png": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Png.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Raw.framework/Leadtools.Codecs.Raw": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Raw.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Tif.framework/Leadtools.Codecs.Tif": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.Tif.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ColorConversion.framework/Leadtools.ColorConversion": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ColorConversion.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lfbmpx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.3"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lfcmpx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.14"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lfcmwx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.1"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lffaxx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.2"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lfgifx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.2"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lfj2kx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.6"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lfjb2x.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.12"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lfjbgx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.2"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lfpngx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.6"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lfrawx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.1"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Lftifx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.17"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltclrx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.5"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lfbmpu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.3"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lfcmpu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.14"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lfcmwu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.1"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lffaxu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.2"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lfgifu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.2"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lfj2ku.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.6"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lfjb2u.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.12"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lfjbgu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.2"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lfpngu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.6"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lfrawu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.1"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Lftifu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.17"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltclru.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.5"
+          }
+        }
+      },
+      "Leadtools.Image.Processing/20.0.0.8": {
+        "dependencies": {
+          "Leadtools.Formats.Raster.Common": "20.0.0.8",
+          "Leadtools.Kernel": "20.0.0.8",
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Leadtools.ImageProcessing.Color.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.1"
+          },
+          "lib/netstandard1.4/Leadtools.ImageProcessing.Core.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.10"
+          },
+          "lib/netstandard1.4/Leadtools.ImageProcessing.Effects.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.1"
+          },
+          "lib/netstandard1.4/Leadtools.ImageProcessing.Kernel.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.1"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltimgclr.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltimgcor.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltimgefx.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltimgkrn.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltimgutl.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTAdaptiveContrastCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTAddCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTAddWeightedCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTAdjustTintCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTApplyMathematicalLogicCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTAutoBinaryCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTAutoColorLevelCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTBalanceColorsCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTChangeContrastCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTChangeHueCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTChangeHueSaturationIntensityCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTChangeIntensityCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTChangeSaturationCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTChannelMixerCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTColorCountCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTColorIntensityBalanceCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTColorLevelCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTColorMergeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTColorReplaceCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTColorSeparateCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTColorThresholdCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTContrastBrightnessIntensityCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTConvertToColoredGrayCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTDesaturateCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTDynamicBinaryCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTEnums.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTGammaCorrectCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTGammaCorrectExtendedCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTGrayScaleExtendedCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTGrayscaleToDuotoneCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTGrayscaleToMultitoneCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTHistogramCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTHistogramContrastCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTHistogramEqualizeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTIntensityDetectCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTInvertCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTLightControlCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTLineProfileCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTLocalHistogramEqualizeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTMathematicalFunctionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTMultiplyCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTPosterizeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTRemapHueCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTRemapIntensityCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTSegmentCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTSelectiveColorCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTSolarizeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTStretchIntensityCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/LTSwapColorsCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Headers/Leadtools.ImageProcessing.Color.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Leadtools.ImageProcessing.Color": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Color.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTAlignImagesCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTAnisotropicDiffusionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTApplyLinearModalityLookupTableCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTApplyLinearVoiLookupTableCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTApplyModalityLookupTableCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTApplyTransformationParametersCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTApplyVoiLookupTableCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTAutoBinarizeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTAutoBinarizeZonesCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTAutoCropCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTAutoCropRectangleCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTAutoPageSplitterCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTAutoZoningCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTBarCodeReadPreprocessCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTBezierPathCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTBlankPageDetectorCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTBlurDetectionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTBorderRemoveCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTCLAHECommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTColorizeGrayCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTConvertSignedToUnsignedCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTConvertUnsignedToSignedCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTCoreUtilities.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTCorrelationCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTCorrelationListCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTDeskewCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTDespeckleCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTDicomLookupTableDescriptor.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTDigitalSubtractCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTDiscreteFourierTransformCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTDotRemoveCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTEnums.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTExpandContentCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTExtractObjectsCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTFastFourierTransformCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTFourierTransformDisplayCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTFourierTransformInformation.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTGetBackgroundColorCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTGetLinearVoiLookupTableCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTHalftoneCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTHighQualityRotateCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTIDCardAlignmentCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTIDCardZoningCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTIDCountryDetectionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTInvertedPageCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTInvertedTextCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTKMeansCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTKeyStoneCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTLambdaConnectednessCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTLevelsetCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTLineRemoveCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTMICRCodeDetectionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTMRZCodeDetectionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTManualPerspectiveDeskewCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTMaximumCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTMedianCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTMinMaxBitsCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTMinMaxValuesCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTMinimumCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTMinimumToZeroCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTMultiscaleEnhancementCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTOmrCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTOtsuThresholdCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTPerspectiveDeskewCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTResizeInterpolateCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTSearchRegistrationMarksCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTShiftDataCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTShrinkWrapCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTSmoothCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTSubtractBackgroundCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTTextBlurDetectionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTTissueEqualizeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTUnWarpCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTWatershedCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTWindowLevelCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTWindowLevelExtCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/LTZeroToNegativeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Headers/Leadtools.ImageProcessing.Core.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Leadtools.ImageProcessing.Core": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Core.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTAddNoiseCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTAlphaBlendCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTAntiAliasingCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTAverageCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTBinaryFilterCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTColorHalftoneCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTCombineCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTDeinterlaceCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTDirectionEdgeStatisticalCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTDisplacementCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTEdgeDetectEffectCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTEdgeDetectStatisticalCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTEdgeDetectorCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTEffectsUtilities.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTEmbossCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTFeatherAlphaBlendCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTGaussianCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTHighPassCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTMaskConvolutionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTObjectInformationCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTOffsetCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTSharpenCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTSmoothEdgesCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTSpatialFilterCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTStatisticsInformationCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTUnsharpMaskCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/LTUserFilterCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Headers/Leadtools.ImageProcessing.Effects.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Leadtools.ImageProcessing.Effects": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Effects.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelCopyImageCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelCropCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelDetectBusinessCardCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelDetectDocumentCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelDetectGlareCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelImage.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelInvertCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelManualPerspectiveCorrectionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelPerspectiveDeskewCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelRotateFlipCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTKernelSignalToNoiseRatioCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/LTRasterCommandsList.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/Leadtools.ImageProcessing.Kernel.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Headers/ltimgkrn.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Leadtools.ImageProcessing.Kernel": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Kernel.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Utilities.framework/Leadtools.ImageProcessing.Utilities": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.ImageProcessing.Utilities.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltimgclrx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.6"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltimgcorx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.99"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltimgefxx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.8"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltimgkrnx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.4"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltimgutlx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.11"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltimgclru.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.6"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltimgcoru.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.99"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltimgefxu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.8"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltimgkrnu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.4"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltimgutlu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.11"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.4/Leadtools.ImageProcessing.Color.dll": {},
+          "lib/netstandard1.4/Leadtools.ImageProcessing.Core.dll": {},
+          "lib/netstandard1.4/Leadtools.ImageProcessing.Effects.dll": {},
+          "lib/netstandard1.4/Leadtools.ImageProcessing.Kernel.dll": {}
+        }
+      },
+      "Leadtools.Kernel/20.0.0.8": {
+        "dependencies": {
+          "Leadtools.Kernel.NETStandard": "20.0.0.8",
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Leadtools.Codecs.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.28"
+          },
+          "lib/netstandard1.4/Leadtools.Drawing.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.3"
+          },
+          "lib/netstandard1.4/Leadtools.Svg.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.7"
+          },
+          "lib/netstandard1.4/Leadtools.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.29"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltdrw.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltfil.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltkrn.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/nativeassets/netcoreapp/libltsvg.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsAbcOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsAnzOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsDefines.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsDocOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsDocumentImageInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsEnumGeoKeysEventArgs.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsEnumTagsEventArgs.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsEpsOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsExtension.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsFaxImageInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsFpxOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsGifImageInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsGifOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsImageInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsJbig2Options.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsJbigOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsJpeg2000Options.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsJpegImageInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsJpegOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsLoadImageEventArgs.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsLoadInformationEventArgs.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsLoadSvgOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsOptimizedLoadData.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsOverlayData.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsPageEventArgs.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsPdfOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsPngOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsPsdChannelInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsPsdImageInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsPsdLayerInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsPstImageInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsPtokaOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsRasterPdfInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsRasterizeDocumentOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsRawOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsRtfOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsSaveImageEventArgs.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsStartDecompressOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsThumbnailOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsTiffImageInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsTiffOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsTransformMarkerCallback.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsTxtOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsVectorImageInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsVectorOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsVffOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCodecsXlsOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTCompressDataCallback.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/LTRasterCodecs.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Headers/Leadtools.Codecs.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Leadtools.Codecs": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Codecs.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Drawing.framework/Leadtools.Drawing": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Drawing.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Headers/LTEnums.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Headers/LTSvgBounds.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Headers/LTSvgDataUri.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Headers/LTSvgDocument.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Headers/LTSvgElementInfo.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Headers/LTSvgNodeHandle.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Headers/LTSvgOptions.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Headers/LTSvgTextData.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Headers/Leadtools.Svg.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Leadtools.Svg": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.Svg.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/l_bitmap.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltann.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltbar.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltcc.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltclr.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltcrt.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltdic.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltdicerrors.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltdictags.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltdicuid.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltdis.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltdocwrt.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/lterr.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltfil.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltimg.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltimgclr.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltimgcor.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltimgefx.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltjp2.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltkrn.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltlck.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltocr.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltocrEnums.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltpck.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltplatforms.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltprimitives.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltspellcheck.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltsvg.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltsys.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/lttyp.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/ltver.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Kernel/lvkrn.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTChangeViewPerspectiveCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTClearCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTClearNegativePixelsCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTCloneCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTColorResolutionCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTCombineFastCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTCombineWarpCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTCopyDataCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTCopyRectangleCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTCreateGrayScaleImageCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTCropCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTDetectAlphaCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTErrorCode.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTFillCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTFlipCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTGrayscaleCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTHandle.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTLeadDataStream.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTLeadFileStream.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTLeadStream.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTLeadtools.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTLeadtoolsDefines.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTMTLDataCallbacks.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTPremultiplyAlphaValuesCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTPrimitives.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterBufferConverter.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterBufferResize.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterColor.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterColor16.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterColorSpace.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterCommandProcessor.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterCommentMetadata.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterDefaults.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterHsvColor.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterImage.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterImageAnimator.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterImageDataCallbacks.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterImageFormat.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterImageMemoryInformation.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterImageResize.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterKnownColor.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterMarkerMetadata.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterMetadata.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterOverlayAttributes.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterPalette.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterRegion.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterRegionXForm.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterRleCompressor.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterSupport.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterTagMetadata.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRasterUserMatchTable.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTResizeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTRotateCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTScrambleCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTSetAlphaValuesCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTShearCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTSizeCommand.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/LTSvgDocument.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Leadtools.Kernel.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Headers/Leadtools.h": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Leadtools": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/nativeassets/netcoreapp/Leadtools.framework/Resources/Info.plist": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltdisx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.12"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltdrwmpx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.20"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltdrwx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.27"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltfilx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.88"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltkrnx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.109"
+          },
+          "runtimes/win-x64/nativeassets/netcoreapp/Ltsvgx.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "20.0.0.77"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltdisu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.12"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltdrwmpu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.20"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltdrwu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.27"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltfilu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.88"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltkrnu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.109"
+          },
+          "runtimes/win-x86/nativeassets/netcoreapp/Ltsvgu.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "20.0.0.77"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.4/Leadtools.Codecs.dll": {},
+          "lib/netstandard1.4/Leadtools.Drawing.dll": {},
+          "lib/netstandard1.4/Leadtools.Svg.dll": {},
+          "lib/netstandard1.4/Leadtools.dll": {}
+        }
+      },
+      "Leadtools.Kernel.NETStandard/20.0.0.8": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Leadtools.Core.dll": {
+            "assemblyVersion": "20.0.0.0",
+            "fileVersion": "20.0.0.3"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.4/Leadtools.Core.dll": {}
         }
       },
       "Localization.AspNetCore.TagHelpers/0.6.0": {
@@ -1377,122 +3630,122 @@
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.4": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.4"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
-            "assemblyVersion": "3.1.3.0",
-            "fileVersion": "3.100.320.26201"
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.40301"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.4": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {
-            "assemblyVersion": "3.1.3.0",
-            "fileVersion": "3.100.320.26201"
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.40301"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.4": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.5",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.3",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.4",
           "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
-            "assemblyVersion": "3.1.3.0",
-            "fileVersion": "3.100.320.26201"
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.40301"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.4": {
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.3"
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.4"
         },
         "runtime": {
           "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {
-            "assemblyVersion": "3.1.3.0",
-            "fileVersion": "3.100.320.26201"
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.40301"
           }
         },
         "compile": {
           "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.4": {
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.4"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
-            "assemblyVersion": "3.1.3.0",
-            "fileVersion": "3.100.320.26201"
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.40301"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.4": {
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "3.1.5",
           "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
           "Microsoft.CodeAnalysis.CSharp": "3.3.1",
           "Microsoft.CodeAnalysis.Razor": "3.1.5",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.4"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
-            "assemblyVersion": "3.1.3.0",
-            "fileVersion": "3.100.320.26201"
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.40301"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.3": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.4": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.3.1",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.3",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.4",
           "Newtonsoft.Json": "12.0.2",
           "NuGet.Frameworks": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
-            "assemblyVersion": "3.1.3.0",
-            "fileVersion": "3.100.320.26201"
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.40301"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.3": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.4": {
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.4"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
-            "assemblyVersion": "3.1.3.0",
-            "fileVersion": "3.100.320.26201"
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.40301"
           }
         },
         "compile": {
@@ -1685,6 +3938,17 @@
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
           }
+        }
+      },
+      "SixLabors.ImageSharp/1.0.0-rc0003": {
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -4259,6 +6523,34 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/7.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512"
     },
+    "Leadtools.Formats.Raster.Common/20.0.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l4TNHIcvG7MRwgvs2T2/4fFzbPMznb22uqYhcc5DmRg46xxkf9gVQyVqa+3mTTrbIHPVb+HTFQLhIjS5KJ9JyA==",
+      "path": "leadtools.formats.raster.common/20.0.0.8",
+      "hashPath": "leadtools.formats.raster.common.20.0.0.8.nupkg.sha512"
+    },
+    "Leadtools.Image.Processing/20.0.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gJ/S1JQXjcDkLf1pqP8qrxCsSGYmeeepo9FOGtBB1GY1C4NPgh/OJ0MwA8b5yZZN1WhYrrRigbMhwqHdtFX8Zg==",
+      "path": "leadtools.image.processing/20.0.0.8",
+      "hashPath": "leadtools.image.processing.20.0.0.8.nupkg.sha512"
+    },
+    "Leadtools.Kernel/20.0.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CVNHZ+UaQNhtfZMKuUeNOGqSLhi67QiLeAGJ4ctXilPgbykW9Gyzh9OaixEc4oi4oT+LXNqCTp5YJ2hA2jATUQ==",
+      "path": "leadtools.kernel/20.0.0.8",
+      "hashPath": "leadtools.kernel.20.0.0.8.nupkg.sha512"
+    },
+    "Leadtools.Kernel.NETStandard/20.0.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oskJNl7S02kP6PzX6MrWmwRnUtAcFd0y9dCbQD9lmAb5cZeNfxpN3k+1R1/dMzQvfWVgTQoPcvOuDjTpF5IGbg==",
+      "path": "leadtools.kernel.netstandard/20.0.0.8",
+      "hashPath": "leadtools.kernel.netstandard.20.0.0.8.nupkg.sha512"
+    },
     "Localization.AspNetCore.TagHelpers/0.6.0": {
       "type": "package",
       "serviceable": true,
@@ -4833,61 +7125,61 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.3": {
+    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-17orw41YWWt91nWrStbfwKv/BbnRXx68sZuQqgTCSWIOUME24Q9URF2kGXN08Zr1JND4VTkrTFFh2N/z7WbHQg==",
-      "path": "microsoft.visualstudio.web.codegeneration/3.1.3",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.3.1.3.nupkg.sha512"
+      "sha512": "sha512-fZjXps4+YILDLMha17katCu/DRuaRoFR4YUvCmMRBhj9cPnM5VIISn/W3ZfCu0LTESTc2shiKHMuc9ObEYmEDw==",
+      "path": "microsoft.visualstudio.web.codegeneration/3.1.4",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.3.1.4.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.3": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-l9HI8o1fjeSxIMs1QEETdNjEUCxbWxOgl7v9Zrjf4gVanXv/nQWOR9hLypSWHol7IThCcT5lc3lEtsOKlvTtOg==",
-      "path": "microsoft.visualstudio.web.codegeneration.contracts/3.1.3",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.contracts.3.1.3.nupkg.sha512"
+      "sha512": "sha512-81MO4s4Ztxz1x76fpZaWZucx1pZnJN/CyLSPnOwsThgQoZy3F5mlknWvpXE5SxYrbfBQNPI73KVTiqXYbt9wgA==",
+      "path": "microsoft.visualstudio.web.codegeneration.contracts/3.1.4",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.contracts.3.1.4.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.3": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-clZ0yhrlc5VZ/qvz+XSOFa/JK4EUk0rFJ26kb/DGT4ZNCx1speB45veFLcmeCG3B/d/XMIlYAPDNhHvyHCJcXg==",
-      "path": "microsoft.visualstudio.web.codegeneration.core/3.1.3",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.core.3.1.3.nupkg.sha512"
+      "sha512": "sha512-LKkea7U0F+hjKW7X6usUMPZtRNQQ9/6rlst3ATWLuWFV3dwlMEh2Spu2ptLi1JYQAUrpBs3uGLz0yypPUkicLQ==",
+      "path": "microsoft.visualstudio.web.codegeneration.core/3.1.4",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.core.3.1.4.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.3": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-N4obD7ldPaX7EHMVQoFHO5bX3zJI6HGkJpwKMuZ0LiGMb/d7ku39H7erXocAsSQbxTs1GCCQx8IbhkAc6a5hEw==",
-      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.3",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.design.3.1.3.nupkg.sha512"
+      "sha512": "sha512-V0P0dAn1/cAFs4/ioIS3/oLiGrhyb1YzgtjPiwh/TXNuFzv7zqwT/gMcQjmlKLDpzDsuq8L3VI7G41GxIC4jNw==",
+      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.4",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.design.3.1.4.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.3": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-q2nOAgelxO/Ceg+MOWtmx9bXV+QHRhE3m3Xg1RSn1dzN/MNnORE4O8jEaXPlw6Rv0kuv97bPU1ALgXd0X2O/jw==",
-      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/3.1.3",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.3.nupkg.sha512"
+      "sha512": "sha512-/SxCjG9Oy1Is3TTSBYr+b+/CTIyKX+9cTETZJeSn7Xy41eDvmJRfbt6JONY9/gumPeJ9ONRS+rjokRkZtQhT1A==",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/3.1.4",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.4.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.3": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KwQkLdsPz/kVSXluIbg9dr1QnO3uI77MAxIADIJz27hNe1VArqpEbW5VkIioMguxLIMjHS6t2yoySTgp7q2D/A==",
-      "path": "microsoft.visualstudio.web.codegeneration.templating/3.1.3",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.templating.3.1.3.nupkg.sha512"
+      "sha512": "sha512-MvYDCioBdKgDqN4cNLbxnsJuMfJy4B9WTi6GycETcETLAVvZQwnYa5WejS7olWpYuov4DYGZEvzEvIBgZHN46Q==",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/3.1.4",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.templating.3.1.4.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.3": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7J8k3dljc4Ii4R73DBrMO2VCp3k/WNASyNvJ1YdVl3Z/HSvN/fpQRBG/L8qVhkI1ad52jZ6nAeShJt/y9IGRyg==",
-      "path": "microsoft.visualstudio.web.codegeneration.utils/3.1.3",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.utils.3.1.3.nupkg.sha512"
+      "sha512": "sha512-rVhjGM5qoiTniacHqYdPq/ZHQURlknybUkUdIgh3JUN9SRjnZpsfoPOD/Z7ZWl+GdruV3OUmlpVyW+Xyc3KoYg==",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/3.1.4",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.utils.3.1.4.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.3": {
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZCgChp0HElZrjWgMC0HH80iJZyVqymjaJsXVpgcyQ88sczqqD4ei1NJa/tnE3O2zTZ2xqqoe9may4LkhJugxiA==",
-      "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.3",
-      "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.3.1.3.nupkg.sha512"
+      "sha512": "sha512-W+F07AWMXek8Ed5pwNfTE6cpHMLSqlTV+5g3LUJVk2QyA7MvY+bRV5gbpgsxtQtX8MYCECOseKg8fUOXXpXPAg==",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.4",
+      "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.3.1.4.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
@@ -5077,6 +7369,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/1.0.0-rc0003": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/pz5SPFX+eFzlcU9wQnRTkOnCH3W97/x7+/fHQJF7sJIfq7VR8KkjxHLdmHJaDbK5jBfciD2McE4dTCMbMKltA==",
+      "path": "sixlabors.imagesharp/1.0.0-rc0003",
+      "hashPath": "sixlabors.imagesharp.1.0.0-rc0003.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

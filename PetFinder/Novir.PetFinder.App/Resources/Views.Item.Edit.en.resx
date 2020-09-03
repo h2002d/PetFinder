@@ -120,11 +120,20 @@
   <data name="Category" xml:space="preserve">
     <value>Category</value>
   </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
   <data name="Color" xml:space="preserve">
     <value>Color</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Description</value>
+  </data>
+  <data name="Found" xml:space="preserve">
+    <value>Found</value>
+  </data>
+  <data name="Lost" xml:space="preserve">
+    <value>Lost</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
@@ -132,11 +141,17 @@
   <data name="Pictures" xml:space="preserve">
     <value>Pictures</value>
   </data>
+  <data name="PolicyText" xml:space="preserve">
+    <value>By clicking Save you accept our &lt;a href="/Home/Privacy"&gt;Privacy policy &amp; terms&lt;/a&gt;</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="SelectCategory" xml:space="preserve">
     <value>--- Select Category ---</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>--- Select City---</value>
   </data>
   <data name="SelectColor" xml:space="preserve">
     <value>--- Select Color ---</value>

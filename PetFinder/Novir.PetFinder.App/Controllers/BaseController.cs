@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -12,10 +13,10 @@ namespace Novir.PetFinder.App.Controllers
 {
     public class BaseController : Controller
     {
-        public override void OnActionExecuted(ActionExecutedContext context)
+        public async override void OnActionExecuted(ActionExecutedContext context)
         {
             string lang = null;
-            var langCookie = Request.Cookies["culture"];
+            var langCookie = Request.Cookies["c"];
             if (langCookie != null)
             {
                 lang = langCookie;
@@ -24,10 +25,18 @@ namespace Novir.PetFinder.App.Controllers
             {
                 lang = SiteLanguages.GetDefaultLanguage();
             }
-            SetLanguage(lang);
+            //SetLanguage(lang);
+            await SetCultureActionFilter(lang);
             base.OnActionExecuted(context);
         }
 
+        static async Task SetCultureActionFilter(string lang)
+        {
+            await Task.Yield();
+            CultureInfo.CurrentCulture = new CultureInfo("am-AM");
+
+            //Console.WriteLine(CultureInfo.CurrentCulture);
+        }
         public void SetLanguage(string lang)
         {
             try

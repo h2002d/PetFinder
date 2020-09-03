@@ -19,6 +19,7 @@ namespace Novir.PetFinder.Data.Repositories.Common
         Task<T> GetSingleBySpec(ISpecification<T> spec);
 
         Task<List<T>> List(ISpecification<T> spec);
+        Task<PagingResult<T>> List(ISpecification<T> spec, PagingQuery query);
 
         Task<T> Add(T entity);
 

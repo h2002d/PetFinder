@@ -10,5 +10,9 @@ namespace Novir.PetFinder.App.ViewModels.Categories
         public int Id { get; set; }
         public string Name { get; set; }
         public int? ParentId { get; set; }
+        public int CategoryOrder { get; set; }
+        public bool hasColor { get; set; }
+
+        public List<CategoryViewModel> ChildCategories { get; set; } = new List<CategoryViewModel>();
     }
 }

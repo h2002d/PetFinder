@@ -120,11 +120,20 @@
   <data name="Category" xml:space="preserve">
     <value>Բաժին</value>
   </data>
+  <data name="City" xml:space="preserve">
+    <value>Քաղաքը</value>
+  </data>
   <data name="Color" xml:space="preserve">
     <value>Գույնը</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Նկարագրություն</value>
+  </data>
+  <data name="Found" xml:space="preserve">
+    <value>Գտնված</value>
+  </data>
+  <data name="Lost" xml:space="preserve">
+    <value>Կորած</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Անվանում</value>
@@ -132,11 +141,17 @@
   <data name="Pictures" xml:space="preserve">
     <value>Նկարներ</value>
   </data>
+  <data name="PolicyText" xml:space="preserve">
+    <value>Սեղմելով Պահպանել դուք ընդունում եք մեր &lt;a href="/Home/Privacy"&gt; Գաղտնիության քաղաքականությունը և կանոնները&lt;/a&gt;</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Պահպանել</value>
   </data>
   <data name="SelectCategory" xml:space="preserve">
     <value>--- Ընտրեք բաժինը ---</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>--- Ընտրեք քաղաքը---</value>
   </data>
   <data name="SelectColor" xml:space="preserve">
     <value>--- Ընտրեք գույնը ---</value>

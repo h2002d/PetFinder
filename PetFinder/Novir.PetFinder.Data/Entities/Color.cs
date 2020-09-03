@@ -8,8 +8,8 @@ namespace Novir.PetFinder.Data.Entities
 {
     public class Color : FinderDatabaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         public string Name { get; set; }
+        public string Name_EN { get; set; }
+        public string Name_RU { get; set; }
     }
 }

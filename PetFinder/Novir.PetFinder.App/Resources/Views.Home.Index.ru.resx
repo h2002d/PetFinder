@@ -120,6 +120,9 @@
   <data name="DetailedSearch" xml:space="preserve">
     <value>Расширенный поиск</value>
   </data>
+  <data name="DetailedSearchSlogan" xml:space="preserve">
+    <value>Поиск ваших потерянных предметов.</value>
+  </data>
   <data name="Found" xml:space="preserve">
     <value>Нашел</value>
   </data>
@@ -137,5 +140,17 @@
   </data>
   <data name="SelectCategory" xml:space="preserve">
     <value>Выберите категорию</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>Выберите город</value>
+  </data>
+  <data name="Slogan1" xml:space="preserve">
+    <value>Найдите свои потерянные предметы и домашних животных с Lost2Find.com</value>
+  </data>
+  <data name="Slogan2" xml:space="preserve">
+    <value>чтобы добавить свой потерянный предмет</value>
+  </data>
+  <data name="SloganLogin" xml:space="preserve">
+    <value>Войдите </value>
   </data>
 </root>

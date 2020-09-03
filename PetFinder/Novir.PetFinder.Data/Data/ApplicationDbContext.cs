@@ -17,7 +17,9 @@ namespace Novir.PetFinder.Data
         public DbSet<Item> Items { get; set; }
         public DbSet<ItemImage> ItemImages { get; set; }
         public DbSet<Color> Colors { get; set; }
+        public DbSet<City> City { get; set; }
         public DbSet<UserEntity> UserInfo { get; set; }
+        public DbSet<Subscriber> Subscribers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

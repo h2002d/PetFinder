@@ -120,6 +120,9 @@
   <data name="DetailedSearch" xml:space="preserve">
     <value>Ընդլայնված որոնում</value>
   </data>
+  <data name="DetailedSearchSlogan" xml:space="preserve">
+    <value>Որոնեք ձեր կորցրած իրերը:</value>
+  </data>
   <data name="Found" xml:space="preserve">
     <value>Գտել եմ</value>
   </data>
@@ -137,5 +140,17 @@
   </data>
   <data name="SelectCategory" xml:space="preserve">
     <value>Ընտրեք բաժինը</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>Ընտրեք քաղաքը</value>
+  </data>
+  <data name="Slogan1" xml:space="preserve">
+    <value>Գտեք ձեր կորած իրերը և կենդանիներին Lost2find.com-ի հետ միասին</value>
+  </data>
+  <data name="Slogan2" xml:space="preserve">
+    <value>կորցրած իր ավելացնելու համար</value>
+  </data>
+  <data name="SloganLogin" xml:space="preserve">
+    <value>Մուտք գործեք</value>
   </data>
 </root>

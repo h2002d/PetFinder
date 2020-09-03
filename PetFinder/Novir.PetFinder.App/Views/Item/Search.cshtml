@@ -1,0 +1,96 @@
+﻿@model Novir.PetFinder.Core.Dto.Common.PagingResultDto<Novir.PetFinder.App.ViewModels.Items.SearchResultViewModel>
+@{
+    ViewData["Title"] = "Search";
+}
+
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Search</h2>
+                <!-- Breadcrumbs -->
+                <nav id="breadcrumbs">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>Search</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="features" class="section wb">
+    <div class="container">
+        <hr class="invis">
+
+        @foreach (var item in Model.Items)
+        {
+            <a href="/Item/Index/@item.Id" class="user-item">
+                <div class="row" style="padding:10px;">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-widget">
+                            <div class="property-main">
+                                <div class="property-wrap">
+                                    <figure class="post-media wow fadeIn">
+                                        <img src="@item.ImageSource" alt="" style="max-height:250px;" class="img-responsive">
+                                        <div class="label-inner">
+                                            <span class="label-status label">@item.Category.Name</span>
+                                        </div>
+                                        @*<div class="price">
+                                                <span class="item-sub-price">$5.550/sq ft</span>
+                                            </div>*@
+                                    </figure>
+                                </div>
+                                <div class="item-foot">
+                                    <div class="pull-left">
+                                        <span class="prop-user-agent">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            @item.UserName
+                                        </span>
+                                    </div>
+                                    <div class="pull-right">
+                                        <span class="prop-date">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            @item.CreateDate.ToString("dd/MM/yyyy")
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end service -->
+                    </div>
+                    <div class="col-md-8">
+                        <div class="item-body">
+                            <h3>@item.Name</h3>
+                            <div class="adderess">
+                                <i class="fa fa-map-marker icon-color-secondary" aria-hidden="true"></i>@item.CityName
+
+                            </div>
+                            <div class="info">
+                                <p>@item.Description.Substring(0, item.Description.Length < 200 ? item.Description.Length : 200)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+            </a>
+        }
+        <div class="row" align="center">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <button class="btn  @(ViewBag.SelectedPage==i?"btn-secondary":"")" onclick="changePage(@i)">@i</button>
+            }
+        </div>
+    </div><!-- end container -->
+</div><!-- end section -->
+@section Scripts{
+    <script>
+        function changePage(page) {
+            var urlString = window.location.href;
+            var url = new URL(urlString);
+            var search_params = url.searchParams;
+            search_params.set('page', page);
+            var new_url = url.toString();
+            window.location.href = new_url;
+        }
+    </script>
+}

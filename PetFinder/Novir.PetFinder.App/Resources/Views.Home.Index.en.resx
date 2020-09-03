@@ -120,6 +120,9 @@
   <data name="DetailedSearch" xml:space="preserve">
     <value>Advanced search</value>
   </data>
+  <data name="DetailedSearchSlogan" xml:space="preserve">
+    <value>Search your lost items.</value>
+  </data>
   <data name="Found" xml:space="preserve">
     <value>Found</value>
   </data>
@@ -137,5 +140,17 @@
   </data>
   <data name="SelectCategory" xml:space="preserve">
     <value>Select Category</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>Select City</value>
+  </data>
+  <data name="Slogan1" xml:space="preserve">
+    <value>Find your lost items and pets with Lost2Find.com</value>
+  </data>
+  <data name="Slogan2" xml:space="preserve">
+    <value>to add your lost item</value>
+  </data>
+  <data name="SloganLogin" xml:space="preserve">
+    <value>Log in</value>
   </data>
 </root>

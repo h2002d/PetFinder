@@ -120,6 +120,9 @@
   <data name="About" xml:space="preserve">
     <value>Մեր մասին</value>
   </data>
+  <data name="Add" xml:space="preserve">
+    <value>Ավելացնել</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Բաժիններ</value>
   </data>
@@ -134,6 +137,21 @@
   </data>
   <data name="Info" xml:space="preserve">
     <value>ԻՆՖՈ</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Մուտք</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Ելք</value>
+  </data>
+  <data name="MyItems" xml:space="preserve">
+    <value>Իմ իրերը</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Իմ պրոֆիլը</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Կանոններ</value>
   </data>
   <data name="Social" xml:space="preserve">
     <value>Սոց․ Ցանցեր</value>

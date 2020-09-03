@@ -26,9 +26,16 @@ namespace Novir.PetFinder.App.Areas.Identity.Pages.Account.Manage
             _userService = userService;
         }
 
+        [BindProperty]
         public UserDto UserDetail { get; set; }
-        public string Username { get; set; }
 
+        [BindProperty]
+        [RegularExpression("^[a-zA-Z0-9-._]{2,64}$", ErrorMessage = "Username must contain only letters and . _")]
+        public string Username { get; set; }
+        public string Email { get; set; }
+        [BindProperty]
+        [RegularExpression(@"^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*", ErrorMessage = "PhoneValidation")]
+        public string PhoneNumber { get; set; }
         [TempData]
         public string StatusMessage { get; set; }
 
@@ -37,10 +44,14 @@ namespace Novir.PetFinder.App.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Phone]
-            [Display(Name = "Phone number")]
+            //    [Phone]
+            //    [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+            [Required]
             public string Name { get; set; }
+            [Required]
+            public string UserName { get; set; }
+            [Required]
             public string SurName { get; set; }
         }
 
@@ -48,16 +59,18 @@ namespace Novir.PetFinder.App.Areas.Identity.Pages.Account.Manage
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-
+            Email = user.Email;
             Username = userName;
             UserDetail = await _userService.GetByGuid(user.Id);
             if (UserDetail != null)
             {
+                var roles = await _userManager.GetRolesAsync(user);
                 Input = new InputModel
                 {
-                    PhoneNumber = phoneNumber,
-                    SurName= UserDetail.SurName,
-                    Name= UserDetail.Name
+                    PhoneNumber = UserDetail.PhoneNumber,
+                    SurName = UserDetail.SurName,
+                    Name = UserDetail.Name,
+
                 };
             }
         }
@@ -89,15 +102,18 @@ namespace Novir.PetFinder.App.Areas.Identity.Pages.Account.Manage
             }
 
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-            if (Input.PhoneNumber != phoneNumber)
-            {
-                var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
-                if (!setPhoneResult.Succeeded)
-                {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
-                    return RedirectToPage();
-                }
-            }
+            //if (Input.PhoneNumber != phoneNumber)
+            //{
+            //    var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
+            //    if (!setPhoneResult.Succeeded)
+            //    {
+            //        StatusMessage = "Unexpected error when trying to set phone number.";
+            //        return RedirectToPage();
+            //    }
+            //}
+            user.UserName = Username;
+            user.PhoneNumber = PhoneNumber;
+            await _userManager.UpdateAsync(user);
             await _userService.Update(UserDetail);
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";

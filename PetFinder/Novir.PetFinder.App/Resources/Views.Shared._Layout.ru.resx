@@ -120,6 +120,9 @@
   <data name="About" xml:space="preserve">
     <value>О нас</value>
   </data>
+  <data name="Add" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Категории</value>
   </data>
@@ -134,6 +137,21 @@
   </data>
   <data name="Info" xml:space="preserve">
     <value>ИНФО</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Вход</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="MyItems" xml:space="preserve">
+    <value>Мои вещи</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Мой профиль</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Правила</value>
   </data>
   <data name="Social" xml:space="preserve">
     <value>Соц. сети</value>

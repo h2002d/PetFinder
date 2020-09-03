@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model List<Novir.PetFinder.Core.Dto.Items.ItemDto>
+
+@{
+    ViewData["Title"] = "Items";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6" style="text-align:left">
+            <h1>
+                @Localizer["MyItems"]
+            </h1>
+
+        </div>
+       
+        <div class="col-sm-6" style="text-align:right">
+            <input type="button" class="btn btn-success" value="@Localizer["Add"] +" onclick="window.location.href='/Item/Create'"/>
+        </div>
+
+    </div>
+    @foreach (var item in Model)
+    {
+
+        <div class="row user-item">
+            <a href="/Item/Index/@item.Id">
+                <div class="col-sm-6" style="text-align:left">
+                    <b>@item.Name</b>
+                </div>
+                <div class="col-sm-6" style="text-align:right">
+                    <i style="color:rgb(204, 204, 204)">@item.CreateDate.ToString("dd/MM/yyyy HH:mm")</i>
+                </div>
+                <div class="col-sm-11">
+                    <i>@item.Description</i>
+                </div>
+            </a>
+            <div class="col-sm-1">
+                <a href="/Item/Edit/@item.Id"><i class="fa fa-edit" style="font-size:20px;color:#00ff21"></i></a>
+                <a href="/Item/Delete/@item.Id"><i class="fa fa-remove" style="font-size:20px;color:#ff0000;"></i></a>
+
+            </div>
+        </div>
+    }
+</div>

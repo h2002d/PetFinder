@@ -5,46 +5,76 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
-<h1>Edit</h1>
-
-<h4>ItemViewModel</h4>
-<hr />
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8 col-sm-offset-2">
             <form asp-action="Edit" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <input type="hidden" asp-for="Id" class="form-control" />
                     <input type="hidden" asp-for="UserId" class="form-control" />
                 </div>
-                <div class="form-group col-sm-6">
+                <div class="form-group col-sm-2">
+                    <label asp-for="Name" class="control-label">@Localizer["Lost"]</label>
+                    <input type="radio" asp-for="Type" value="0" />
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-2">
+                    <label asp-for="Name" class="control-label">@Localizer["Found"]</label>
+                    <input type="radio" asp-for="Type" value="1" />
+                </div>
+                <div class="form-group col-sm-12">
                     <label asp-for="Name" class="control-label">@Localizer["Name"]</label>
-                    <input asp-for="Name" class="form-control" />
+                    <input required asp-for="Name" maxlength="50" class="form-control" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
-                <div class="form-group col-sm-6">
+                <div class="form-group col-sm-12">
+                    <label asp-for="Description" class="control-label">@Localizer["Description"]</label>
+                    <textarea required style="resize: none; height:100px;" asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <hr class="col-sm-12 hr-create-item" />
+                <div class="form-group col-sm-4">
+
+                    <label asp-for="CityId" class="control-label">@Localizer["City"]</label>
+                    <select required asp-for="CityId" class="form-control main-category-select" data-style="btn-white">
+                        <option value="">@Localizer["SelectCity"]</option>
+                        @foreach (var city in Model.AllCities)
+                        {
+                            <option value="@city.Id">@city.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="CityId" class="text-danger"></span>
+
+                </div>
+                <div class="form-group col-sm-4">
+
                     <label asp-for="CategoryId" class="control-label">@Localizer["Category"]</label>
-                    <select required asp-for="CategoryId" asp-items="Model.AllCategories" class="form-control">
+                    <select required asp-for="CategoryId" class="form-control main-category-select" data-style="btn-white">
                         <option value="">@Localizer["SelectCategory"]</option>
+                        @foreach (var parent in Model.AllCategories)
+                        {
+                            <optgroup label="@parent.Name">
+                                @foreach (var child in parent.ChildCategories)
+                                {
+                                    <option value="@child.Id">@child.Name</option>
+                                }
+                            </optgroup>
+                        }
                     </select>
                     <span asp-validation-for="CategoryId" class="text-danger"></span>
 
                 </div>
-
-                <div class="form-group col-sm-6">
-                    <label asp-for="Description" class="control-label">@Localizer["Description"]</label>
-                    <input asp-for="Description" class="form-control" />
-                    <span asp-validation-for="Description" class="text-danger"></span>
-                </div>
-                <div class="form-group col-sm-6">
+                <div class="form-group col-sm-4">
                     <label asp-for="Color" class="control-label">@Localizer["Color"]</label>
                     <select required asp-for="Color" asp-items="Model.AllColors" class="form-control">
                         <option value="">@Localizer["SelectColor"]</option>
                     </select>
                     <span asp-validation-for="Color" class="text-danger"></span>
                 </div>
+
+                <hr class="col-sm-12 hr-create-item" />
                 <div class="form-group col-sm-12">
                     <label class="control-label">@Localizer["Pictures"]</label>
                     @if (Model != null && Model.ItemImages != null)
@@ -60,11 +90,15 @@
                         }
                     }
                 </div>
-                <div class="form-group col-sm-3">
+                <div class="form-group col-sm-12">
                     <input type="file" name="formFiles" id="formFiles" class="form-control" multiple accept="image/x-png,image/gif,image/jpeg" />
                 </div>
-                <div class="form-group col-sm-12">
-                    <input type="submit" value="@Localizer["Save"]" class="btn btn-primary" />
+
+                <div class="form-group col-sm-12" style=" background: #ffd95b; padding: 10px; border-radius: 2px;">
+                    <p class="terms-p">@Localizer["PolicyText"]</p>
+                </div>
+                <div class="form-group col-sm-offset-3 col-sm-6">
+                    <button type="submit" value="SEND" id="submit1" class="btn btn-main-search btn-radius btn-brd grd1 btn-block">@Localizer["Save"]</button>
                 </div>
             </form>
         </div>

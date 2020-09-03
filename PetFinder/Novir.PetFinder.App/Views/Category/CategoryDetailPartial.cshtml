@@ -1,0 +1,14 @@
+﻿@model Novir.PetFinder.App.ViewModels.Categories.CategoryViewModel
+@inject IViewLocalizer Localizer
+@using Microsoft.AspNetCore.Mvc.Localization
+@{
+    ViewData["Title"] = "CategoryDetailPartial";
+}
+
+<div class="form-group col-sm-4">
+    <label for="Color" class="control-label">@Localizer["Color"]</label>
+    <select required name="Color" asp-items="@ViewBag.AllColors" class="form-control">
+        <option value="">@Localizer["SelectColor"]</option>
+    </select>
+    <span name="Color" class="text-danger"></span>
+</div>

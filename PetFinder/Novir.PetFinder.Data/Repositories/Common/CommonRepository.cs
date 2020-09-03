@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Novir.PetFinder.Data.Repositories.Common
 {
     public abstract class CommonRepository<TKey, T> : ICommonRepository<TKey, T>
-        where T : class, new()
+        where T : FinderDatabaseEntity, new()
     {
         protected readonly DbContext _appDbContext;
 
@@ -20,7 +20,7 @@ namespace Novir.PetFinder.Data.Repositories.Common
 
         public virtual async Task<T> GetById(TKey id)
         {
-            return _appDbContext.Set<T>().Find(id);
+            return await _appDbContext.Set<T>().FindAsync(id);
         }
 
         public async Task<Tuple<bool, T>> TryGetById(TKey id)
@@ -30,11 +30,11 @@ namespace Novir.PetFinder.Data.Repositories.Common
         }
 
         public async Task<T> GetByKeyValues(params object[] keyValues)
-            => _appDbContext.Set<T>().Find(keyValues);
+            => await _appDbContext.Set<T>().FindAsync(keyValues);
 
         public async Task<List<T>> ListAll()
         {
-            var model = _appDbContext.Set<T>().ToList();
+            var model = await _appDbContext.Set<T>().ToListAsync();
             return model;
         }
 
@@ -44,9 +44,9 @@ namespace Novir.PetFinder.Data.Repositories.Common
 
             int toalItemsCount = await queryable.CountAsync();
 
-            var items = queryable.Skip((query.Page - 1) * query.ItemsPerPage)
+            var items = await queryable.OrderByDescending(x=>x.Id).Skip((query.Page - 1) * query.ItemsPerPage)
                                 .Take(query.ItemsPerPage)
-                                .ToList();
+                                .ToListAsync();
 
             return new PagingResult<T>() { TotalItems = toalItemsCount, Items = items };
         }
@@ -70,9 +70,35 @@ namespace Novir.PetFinder.Data.Repositories.Common
                     (current, include) => current.Include(include));
 
             // return the result of the query using the specification's criteria expression
-            return secondaryResult
-                            .Where(spec.Criteria)
-                            .ToList();
+            var res = await secondaryResult.Where(spec.Criteria).ToListAsync();
+            return res.OrderByDescending(x=>x.Id).ToList();
+        }
+
+
+        public async Task<PagingResult<T>> List(ISpecification<T> spec, PagingQuery query)
+        {
+            // fetch a Queryable that includes all expression-based includes
+            var queryableResultWithIncludes = spec.Includes
+                .Aggregate(_appDbContext.Set<T>().AsQueryable(),
+                    (current, include) => current.Include(include));
+
+            // modify the IQueryable to include any string-based include statements
+            var secondaryResult = spec.IncludeStrings
+                .Aggregate(queryableResultWithIncludes,
+                    (current, include) => current.Include(include));
+            // return the result of the query using the specification's criteria expression
+            var queryable = secondaryResult.Where(spec.Criteria).OrderByDescending(x=>x.Id);
+
+            int toalItemsCount = await queryable.CountAsync();
+            //int totalPages = Convert.ToInt32(Math.Round(Convert.ToDecimal(toalItemsCount / query.ItemsPerPage), 
+            //    MidpointRounding.AwayFromZero));
+            int totalPages = toalItemsCount / query.ItemsPerPage;
+            if (toalItemsCount % query.ItemsPerPage > 0)
+                totalPages++;
+            var items = await queryable.Skip((query.Page - 1) * query.ItemsPerPage)
+                                .Take(query.ItemsPerPage).ToListAsync();
+
+            return new PagingResult<T>() { TotalItems = toalItemsCount, TotalPages = totalPages, Items = items };
         }
 
         public async Task<T> Add(T entity)

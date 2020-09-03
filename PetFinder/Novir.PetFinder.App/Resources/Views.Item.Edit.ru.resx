@@ -120,11 +120,20 @@
   <data name="Category" xml:space="preserve">
     <value>Категория</value>
   </data>
+  <data name="City" xml:space="preserve">
+    <value>Город</value>
+  </data>
   <data name="Color" xml:space="preserve">
     <value>Цвет</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Описание</value>
+  </data>
+  <data name="Found" xml:space="preserve">
+    <value>Найден</value>
+  </data>
+  <data name="Lost" xml:space="preserve">
+    <value>Потерян</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Название</value>
@@ -132,11 +141,17 @@
   <data name="Pictures" xml:space="preserve">
     <value>Изображения</value>
   </data>
+  <data name="PolicyText" xml:space="preserve">
+    <value>Нажимая сохранить вы принимаете нашу  &lt;a href="/Home/Privacy"&gt;Политику конфиденциальности и правила&lt;/a&gt;</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Сохранить</value>
   </data>
   <data name="SelectCategory" xml:space="preserve">
     <value>--- Выберите категорию ---</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>--- Выберите город ---</value>
   </data>
   <data name="SelectColor" xml:space="preserve">
     <value>--- Выберите цвет ---</value>
